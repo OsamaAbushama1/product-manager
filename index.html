@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" sizes="16x16" href="icon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+   <div>
+     <h1 id="cruds">Product Manager</h1>
+     <p id="cruds">Manage Your Products Easily</p>
+    <form>
+        <input id="title" class="txt" type="text" placeholder="Enter Product Name">
+        <div class="inputs-group">
+            <input onkeyup="getTotal()" type="number" name="" id="price" placeholder="Enter Price">
+            <input onkeyup="getTotal()" type="number" name="" id="taxes" placeholder="Enter Taxes">
+            <input onkeyup="getTotal()" type="number" name="" id="ads" placeholder="Enter Ads Cost">
+            <input onkeyup="getTotal()" type="number" name="" id="discount" placeholder="Enter Discount">
+            <small id="total" class="total">Total : </small>
+        </div>
+        <input id="count" class="txt" type="number" placeholder="Enter Quantity">
+        <input id="Cat" class="txt" type="text" placeholder="Enter Category">
+        <button type="button" id="create">Create</button>
+        <button id="btnUpdate"></button>
+        <input id="search" class="txt" type="search" placeholder="Search by Product Name">
+
+        <button onclick="delAll()" type="button" id="deleteAll"></button>
+        <div class="table-container">
+            <table border="1">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>Ads</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </form>
+        </div>
+   </div>
+    <script src="script.js"></script>
+</body>
+</html>

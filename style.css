@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #d1d9e6 100%);
+    min-height: 100vh;
+    padding: 15px;
+}
+
+#cruds {
+    text-align: center;
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+#cruds + p {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+form {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+form .txt, .inputs-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+form .txt:focus, .inputs-group input:focus {
+    outline: none;
+    border-color: #6b7280;
+    box-shadow: 0 0 5px rgba(107, 114, 128, 0.2);
+}
+
+.inputs-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.inputs-group input {
+    flex: 1;
+    min-width: 100px;
+}
+
+.inputs-group .total {
+    padding: 10px;
+    background: #a0aec0;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+#create, #btnUpdate, #deleteAll, .search button {
+    width: 100%;
+    background: #6b7280;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-bottom: 10px;
+}
+
+#btnUpdate {
+    background: #4b5563; 
+}
+
+#deleteAll {
+    background: #f87171;
+}
+
+#create:hover, #btnUpdate:hover, #deleteAll:hover, .search button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.search {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.search button {
+    width: 49%;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; 
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    min-width: 600px; 
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+}
+
+table th {
+    background: #6b7280;
+    color: white;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background: #f7fafc;
+}
+
+table tr:hover {
+    background: #edf2f7;
+}
+
+table button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s ease;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+table button:first-child {
+    background: #f87171; 
+    margin-right: 5px;
+}
+
+table button:last-child {
+    background: #4b5563;
+}
+
+table button:hover {
+    filter: brightness(1.05);
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    #cruds {
+        font-size: clamp(1.5rem, 4vw, 1.8rem);
+    }
+
+    #cruds + p {
+        font-size: clamp(0.9rem, 3vw, 1rem);
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    .inputs-group {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .inputs-group input {
+        min-width: 100%;
+    }
+
+    .inputs-group .total {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    .search button {
+        width: 100%;
+    }
+
+    table th, table td {
+        padding: 8px;
+        font-size: clamp(0.75rem, 2vw, 0.85rem);
+    }
+
+    table button {
+        padding: 5px 8px;
+        font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .inputs-group {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .inputs-group input {
+        min-width: 45%;
+    }
+
+    .inputs-group .total {
+        width: 100%;
+        text-align: center;
+    }
+
+    .search button {
+        width: 48%;
+    }
+
+    table th, table td {
+        padding: 9px;
+        font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+    }
+
+    table button {
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 901px) {
+    form {
+        padding: 20px;
+    }
+
+    .inputs-group {
+        gap: 15px;
+    }
+
+    .inputs-group input {
+        min-width: 100px;
+    }
+
+    .search button {
+        width: 49%;
+    }
+
+    table th, table td {
+        padding: 12px;
+    }
+}
