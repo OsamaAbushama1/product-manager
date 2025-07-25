@@ -6,7 +6,6 @@ Product Manager is a single-page web application designed to manage a product in
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
-- [Project Structure](#project-structure)
 - [Usage](#usage)
 
 ## Features
@@ -49,13 +48,6 @@ Double-click index.html to open it directly
 
 Ensure the style.css, script.js, and icon.ico files are in the same directory as index.html.
 
-Project Structure
-product-manager/
-├── index.html           # Main HTML file for the application
-├── style.css            # Custom CSS for styling the interface
-├── script.js            # JavaScript logic for product management
-├── icon.ico             # Favicon for the application
-└── README.md            # Project documentation
 
 Usage
 
